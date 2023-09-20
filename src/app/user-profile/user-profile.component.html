@@ -1,0 +1,11 @@
+<div style="margin: 5px; display:flex;flex-direction: column; width: 30%;">
+    <img [src]="user.photo" alt="photo"  />
+    <div style="margin: 5px; display:flex; flex-direction: column;">
+        <h3>Nom: {{user.name}}</h3>
+        <h3>Prénom: {{user.firstName}}</h3>
+        <p>{{user.quote}}</p>
+        <input type="text" placeholder="Modifier quote" [(ngModel)]="user.quote">
+        <p [hidden]="isHidden">Age: {{user.age}} ans</p>
+        <button (click)="hideOrShowAge()" >{{toggleAgeInfo}} mon âge</button>
+    </div>
+</div>
