@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserDetails } from './user.model';
 
 @Component({
   selector: 'app-signup',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
+  user: UserDetails = new UserDetails("","","","")
 
+  onSubmit(){
+    console.log('user: ',this.user);    
+  }
 }
